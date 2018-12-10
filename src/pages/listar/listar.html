@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista dos Alunos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  
+  <ion-list>
+    <button ion-item *ngFor="let aluno of listaAlunos">
+      {{ aluno.nome }}
+    </button>
+  </ion-list>
+
+  <ion-fab right bottom>
+      
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab (click)='irParaPaginaCacastro()'><ion-icon name="person-add"></ion-icon></button>
+      </ion-fab-list>
+      
+    </ion-fab>
+</ion-content>
