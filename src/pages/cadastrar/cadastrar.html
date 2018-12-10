@@ -1,0 +1,55 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>cadastrar Aluno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+    
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.nome"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Sobrenome</ion-label>
+      <ion-input type="text" [(ngModel)]="aluno.sobrenome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>e-mail</ion-label>
+        <ion-input type="text" [(ngModel)]="aluno.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>Sexo</ion-label>
+        <ion-select [(ngModel)]="aluno.sexo">
+          <ion-option value="f">Feminino</ion-option>
+          <ion-option value="m">Masculino</ion-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Data de nascimeto</ion-label>
+      <ion-datetime displayFormat="DD MMM YYYY" [(ngModel)]="aluno.nascimento"></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+  
+  <div align="center">
+    <button ion-button color="secondary" icon-start (click)="cadastrarAluno()">
+        <ion-icon name='ios-cafe'></ion-icon>
+        Cadastrar
+    </button>
+    
+    <button ion-button color="danger" icon-start (click)="cancelarCadastro()">
+        <ion-icon name='close'></ion-icon>
+        Cancelar
+    </button>
+  </div>
+
+</ion-content>
