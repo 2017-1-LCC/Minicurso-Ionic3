@@ -5,26 +5,20 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { ListarPage } from '../pages/listar/listar';
-import { CadastrarPage } from '../pages/cadastrar/cadastrar';
 import { AlunosProvider } from '../providers/alunos/alunos';
+import { ListarPageModule } from '../pages/listar/listar.module';
+import { CadastrarPageModule } from '../pages/cadastrar/cadastrar.module';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    ListarPage,
-    CadastrarPage
-  ],
+  declarations: [MyApp],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    ListarPageModule,
+    CadastrarPageModule
   ],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    ListarPage,
-    CadastrarPage
-  ],
+  entryComponents: [MyApp],
   providers: [
     StatusBar,
     SplashScreen,

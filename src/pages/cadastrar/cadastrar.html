@@ -41,9 +41,14 @@
   </ion-list>
   
   <div align="center">
-    <button ion-button color="secondary" icon-start (click)="cadastrarAluno()">
+    <button *ngIf="!aluno.id" ion-button color="secondary" icon-start (click)="cadastrarAluno()">
         <ion-icon name='ios-cafe'></ion-icon>
         Cadastrar
+    </button>
+
+    <button *ngIf="aluno.id" ion-button color="secondary" icon-start (click)="editarAluno()">
+        <ion-icon name='ios-cafe'></ion-icon>
+        Editar
     </button>
     
     <button ion-button color="danger" icon-start (click)="cancelarCadastro()">
