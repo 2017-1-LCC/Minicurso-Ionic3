@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista dos Alunos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-item-sliding *ngFor="let aluno of listaAlunos">
+        <ion-item>
+          <ion-avatar item-start>
+              <ion-icon name="contact" style="font-size:40px"></ion-icon>
+          </ion-avatar>
+          <h2>{{ aluno.nome }}</h2>
+        </ion-item>
+        <ion-item-options side="left">
+          <button ion-button color="primary" (click)="editarItem(aluno)">
+            <ion-icon name="build"></ion-icon>
+            Editar
+          </button>
+        </ion-item-options>
+        <ion-item-options side="right">
+          <button ion-button color="danger" (click)="remover(aluno)">
+            <ion-icon name="trash"></ion-icon>
+            Remover
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+
+
+  <ion-fab right bottom>
+      
+    <button ion-fab color="dark"><ion-icon name="arrow-dropup"></ion-icon></button>
+      <ion-fab-list side="top">
+        <button ion-fab (click)='irParaPaginaCacastro()'><ion-icon name="person-add"></ion-icon></button>
+      </ion-fab-list>
+      
+    </ion-fab>
+</ion-content>
