@@ -1,8 +1,8 @@
 # Ionic3 + Firebase
 
 
-	 O objetivo desse repositório é guardar o material do mini curso de ionic3 + firebase, onde vamos mostrar como criar um projeto com ionic, e como integrar com o BaaS firebase.
-
+<p style="justify-content:center">O objetivo desse repositório é guardar o material do mini curso de ionic3 + firebase, onde vamos mostrar como criar um projeto com ionic, e como integrar com o BaaS firebase.
+</p>
 
 ## Introdução
 
