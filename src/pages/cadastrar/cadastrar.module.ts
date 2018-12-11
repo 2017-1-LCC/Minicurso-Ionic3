@@ -8,6 +8,6 @@ import { CadastrarPage } from './cadastrar';
   ],
   imports: [
     IonicPageModule.forChild(CadastrarPage),
-  ],
+  ]
 })
 export class CadastrarPageModule {}
