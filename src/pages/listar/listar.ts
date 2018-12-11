@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlunosProvider } from '../../providers/alunos/alunos';
+import { CadastrarPage } from '../cadastrar/cadastrar';
 
 @IonicPage()
 @Component({
@@ -24,11 +25,11 @@ export class ListarPage {
   }
 
   public irParaPaginaCacastro(){
-    this.navCtrl.push("CadastrarPage");
+    this.navCtrl.push(CadastrarPage);
   }
 
   public editarItem(item) {
-    this.navCtrl.push("CadastrarPage",{param:item});
+    this.navCtrl.push(CadastrarPage,{param:item});
   }
 
   public remover(item) {
