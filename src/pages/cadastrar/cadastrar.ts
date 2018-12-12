@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ListarPage } from '../listar/listar';
 import { AlunosProvider } from '../../providers/alunos/alunos';
 
 @IonicPage()

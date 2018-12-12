@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { AlunosProvider } from '../../providers/alunos/alunos';
 import { CadastrarPage } from '../cadastrar/cadastrar';
 
@@ -14,7 +14,8 @@ export class ListarPage {
   constructor(
     public navCtrl: NavController, 
     public navParams: NavParams, 
-    private providerAluno:AlunosProvider
+    private providerAluno:AlunosProvider,
+    public alertaCtrl: AlertController
   ) 
   {
 
@@ -39,6 +40,18 @@ export class ListarPage {
 
   private load() {
     this.listaAlunos = this.providerAluno.getListaAlunosProviders();
+  }
+
+  public alerta(item:any){   
+    let texto = "Sobrenome: " + item.sobrenome +" || E-mail: " + item.email + 
+    " || Sexo: " + item.sexo + " || Nascimento: " + item.nascimento; 
+    
+    const alerta = this.alertaCtrl.create({
+      title: item.nome,
+      subTitle: texto,
+      buttons: ['OK']
+    });
+    alerta.present();
   }
 
 }
